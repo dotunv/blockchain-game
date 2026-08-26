@@ -9,10 +9,8 @@ import { ethers } from "ethers"
 import generateTypedAuth from '../commons/auth.mjs'
 import dotenv from 'dotenv'
 import { iceServers } from "@geckos.io/server"
-import { spawn } from 'child_process'
 import { fileURLToPath } from 'url'
 import path from 'path'
-import { FileEditor } from './game/FileEditor.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -120,7 +118,5 @@ io.onConnection(channel => {
 })
 
 server.listen(9208, () => {
-    FileEditor(process.cwd()).catch(error => {
-        console.error("FileEditor error:", error)
-    })
+    console.log('listening on http://localhost:9208')
 })

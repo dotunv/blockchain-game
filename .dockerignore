@@ -1,0 +1,10 @@
+.git
+**/node_modules
+**/dist
+**/cache
+**/artifacts
+**/out
+*.log
+SECURITY_ANALYSIS.md
+readme/
+.env*
